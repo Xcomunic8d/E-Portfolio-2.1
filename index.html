@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Gray</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "5017ofozKCoWSB25u",
+            });
+        })();
+    </script> 
+</head>
+<body>
+    <section id="landing-page">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="./assets/Gray Designs Logo.svg" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    "><i class="fas fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+          <div class="header__content">
+            <h1 class="title">Aloha</h1>
+            <h1 class="title gray">I'm Don.</h1>
+            <p class="header__para">
+                I'm a <b class= "blue">Frontend Software Engineer</b> with a strong passion for building web
+                applications with great user experience. 
+                <br> 
+                Here's more <b class="blue click" onclick="toggleModal()">about me</b>. 
+            </p>
+            <div class="social__list">
+                <a href="" class="social__link click"><i class="fab fa-linkedin-in"></i></a>
+                <a href="" class="social__link click"><i class="fab fa-github"></i></a>
+                <a href="" class="social__link click"><i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>  
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's more about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                <p class="modal__para">
+                    <br>•	Reusable & Scalable Coding- HTML & CSS
+<br>•	Lean Six Sigma BlackBelt
+<br>•	Responsive Websites
+<br>•	10 years experience building professional websites
+<br>•	Created solution for digitizing all aspects of company operations. 
+<br>•	Learned C++ and Assembler as a teenager. 
+<br>
+<br>My background brings a unique skill set that bridges the gap across organizational structures. I am passionate about making solutions that are as beautiful as they are functional. <b class="social__link--aboutMe" onclick="toggleModal()">About Me.</b>
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/html-5.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/css-3.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/js.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/react.png" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                     <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/github-logo.png" alt="">
+                        <span class="language__name">Github</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://tse3.mm.bing.net/th/id/OIP.Q5K3ZcL44_iWH0CfOeyh-AHaHW?rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="">
+                        <span class="language__name">WordPress</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://logos-world.net/wp-content/uploads/2020/10/Wix-Logo-2015-present.jpg" alt="">
+                        <span class="language__name">Wix</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                        src="https://tse4.mm.bing.net/th/id/OIP.49M8TQFI9sfnen1XsiBukQHaEz?w=666&h=432&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                        <span class="language__name">Squarespace</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">Please Contact Me!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm open to new opportunities.</h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <div class="btn__submit">
+                        <button id="contact__submit" class="form__submit">Send It to Me.</button>
+                    </div>    
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thank you for contacting me. I Look forward to speaking to you soon.
+                </div>           
+            </div>            
+        </div>
+        <!-- <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8"> -->
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="gray">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+          <div class="project__wrapper">
+            <img src="./Assets/GraceinHilo pic.png" class="project__img" alt="">
+            <div class="project__wrapper--bg"></div>
+            <div class="project__description">
+              <h3 class="project__description--title">
+                First Website I Made.
+              </h3>
+              <h4 class="project__description--sub-title">
+                Html, CSS, JavaScript, WordPress
+              </h4>
+              <p class="project__description--para">
+                A local church needed a completely new website identity. They needed a total brand refresh requiring logos, website, pictures, domain, and live stream capabilities. This church has multiple things in progress, services, youth ministries, addiction ministries, food pantry distribution and overseas support. Encapsulating all of its needs in one location was a rewarding challenge.
+              </p>
+              <div class="project__description--links">
+                <a href="https://graceinhilo.com/" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>    
+        <li class="project">
+          <div class="project__wrapper">
+            <img src="./Assets/graywoodworkspic.png" class="project__img" alt="">
+            <div class="project__wrapper--bg"></div>
+            <div class="project__description">
+              <h3 class="project__description--title">
+                Woodworking Business Website
+              </h3>
+              <h4 class="project__description--sub-title">
+                Html, CSS, JavaScript, Squarespace, WordPress, Hostinger
+              </h4>
+              <p class="project__description--para">
+                This website helped launched the professional work of a local woodworker. This was a hobby that turned into a business due to revenue generation. With heavy emphasis placed on SEO this website ranks #1 in most searches when you search Gray Woodworks with no other identifiers.
+              </p>
+              <div class="project__description--links">
+                <a href="www.graywoodworksdesigns.com" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="project">
+          <div class="project__wrapper">
+            <img src="./Assets/graywoodworkspic.png" class="project__img" alt="">
+            <div class="project__wrapper--bg"></div>
+            <div class="project__description">
+              <h3 class="project__description--title">
+                E-Commerce Project
+              </h3>
+              <h4 class="project__description--sub-title">
+                Html, CSS, JavaScript
+              </h4>
+              <p class="project__description--para">
+                This project was my absolute favorite in all of my coding classes. It has everything in it. This project is beautiful and encompasses every area of coding. 
+              </p>
+              <div class="project__description--links">
+                <a href="www.graywoodworksdesigns.com" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+        </div>
+        </li>
+        <li class="project">
+          <div class="project__wrapper">
+            <img src="./assets/Module 3 Final Project.png" class="project__img" alt="">
+            <div class="project__wrapper--bg"></div>
+            <div class="project__description">
+              <h3 class="project__description--title">
+                Coding Course Final Project
+              </h3>
+              <h4 class="project__description--sub-title">
+                Html, CSS, Tailwind
+              </h4>
+              <p class="project__description--para">
+                This was a very challenging project. FES Institute gave me a picture of a project similar to Figma and told me to render it 1:1 from what I was given. No templates were used. Every line of code was written by me from parameters and assets provided. This project was the capstone achievement of phase 1. This was a required project in order for each student to progress to the next phase of training. I received top marks for this assignment.
+              </p>
+              <div class="project__description--links">
+                <a href="https://xcomunic8d.github.io/Module-3-Final-Project/" target="_blank" class="project__description--link">
+                  <i class="fas fa-link"></i>           
+                </a>
+            </div>
+        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img class="footer__logo--img" src="./assets/Gray Designs Logo.svg" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://github.com/Xcomunic8d" class=
+                        "footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        Gitub
+                    </a>
+                    <a href="https://www.linkedin.com/in/don-gray-38069531/" class=
+                        "footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        LinkedIn
+                    </a>
+                    <a href="#" class=
+                        "footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white"
+                        onclick="toggleModal()">
+                        Contact
+                    </a>
+                    <a href="#" class=
+                        "footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white">
+                        Resume
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    <em>Copyright © 2026 Don Gray</em>
+                </div>            
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
